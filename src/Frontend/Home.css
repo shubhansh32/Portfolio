@@ -92,4 +92,7 @@ letter-spacing: 2px;
     .skills-container{
         grid-template-columns: 1fr;
     }
+    .about-highlights{
+         grid-template-columns: repeat(2,1fr);
+    }
 }
