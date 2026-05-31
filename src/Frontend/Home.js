@@ -21,11 +21,11 @@ function Home(){
     margin: "0",
     padding: "0",
     fontSize: "20px"}}>
-        <li><a>About</a></li>
-        <li><a>Skills</a></li>
-        <li><a>Project</a></li>
-        <li><a>Contact</a></li>
-        <li><a>Experience</a></li>
+       <li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#project">Project</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#experience">Experience</a></li>
        </ul>
 
     <div style={{display:"flex",
