@@ -1,5 +1,5 @@
 import React from "react";
-import {FatGithub,FaLinkedin,FaInstagram} from "react-icons/fa";
+
 import Student from "../assets/Student.jpeg";
 import "./Home.css";
 import "./contact.css";
@@ -128,21 +128,21 @@ function Home(){
     </p>
 
     <div className="footer-links">
-        <a
+        <button
             href="https://github.com/your-github"
             target="_blank"
             rel="noreferrer"
         >
             GitHub
-        </a>
+        </button>
 
-        <a
+        <button
             href="https://linkedin.com/in/your-linkedin"
             target="_blank"
             rel="noreferrer"
         >
             LinkedIn
-        </a>
+        </button>
     </div>
 
     <p className="copyright">
