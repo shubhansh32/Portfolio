@@ -1,0 +1,95 @@
+.skills-section{
+    padding: 80px 10%;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+.skills-section h1{
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: gray;
+    letter-spacing: 2px;
+}
+.project-section{
+    padding: 80px 10%;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+.project-section h1{
+font-size: 42px;
+margin-bottom: 40px;
+color: gray;
+letter-spacing: 2px;
+}
+.skills-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.skills-card { background-color: #1e293b; 
+    padding: 25px; 
+    border-radius: 12px;
+     font-size: 20px; 
+     font-weight: 600; 
+     cursor: pointer;
+      transition: all 0.3s ease;
+       border: 2px solid transparent; }
+
+.skills-card:hover{
+    transform: translateY(-8px); 
+    background-color: cyan; 
+    color: black;
+     border: 2px solid white;
+}
+.pro-card{
+    background-color: #0f172a;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.pro-card:hover{
+    transform: translateY(-8px);
+    background-color: cyan;
+    color: black;
+    border: 2px solid white;
+}
+
+/* About Section */ .about-section { padding: 80px 10%; background-color: #0f172a; color: white; } 
+.about-section h1 { text-align: center; font-size: 42px; color: cyan; margin-bottom: 40px; letter-spacing: 2px; }
+ .about-content { max-width: 900px; margin: auto; text-align: center; } 
+ .about-content p { font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #d1d5db; }
+  /* Highlight Cards */ .about-highlights { margin-top: 50px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+   .highlight-card { background-color: #1e293b; padding: 25px; border-radius: 12px; text-align: center; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0px 4px 15px rgba(0,0,0,0.3); } 
+   .highlight-card:hover { transform: translateY(-8px) scale(1.03); background-color: cyan; color: black; border: 2px solid white; }
+
+/* Skills Section */
+.skills-section {
+    padding: 80px 10%;
+}
+
+@media screen and (max-width :768px) {
+    .skills-container{
+        grid-template-columns: repeat(2,1fr);
+
+    }    
+
+    .skills-section h1{
+        font-size: 32px;
+    }
+    .skills-card{
+        font-size: 18px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width :480px) {
+    .skills-container{
+        grid-template-columns: 1fr;
+    }
+}
