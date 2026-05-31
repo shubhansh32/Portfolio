@@ -76,9 +76,7 @@
     background-color: white;
 }
 
-/* =========================
-   Mobile Responsive
-========================= */
+
 
 @media screen and (max-width: 768px){
 
@@ -96,9 +94,7 @@
     }
 }
 
-/* =========================
-   Footer
-========================= */
+
 
 .footer{
     padding: 40px 10%;
