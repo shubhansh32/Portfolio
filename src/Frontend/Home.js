@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import Student from "../assets/Student.jpeg";
 import "./Home.css";
 import "./contact.css";
+import axios from "axios";
 
 function Home() {
+
+  const [formdata,setFormdata]=useState({
+name:"",
+email:"",
+message:"",
+  });
+
+  const handleSubmit= async(e)=>{
+    e.preventDefault();
+    try{
+  const response=await axios.post(
+     "https://portfolio-pzgj.onrender.com/api/contact",
+    formdata
+  );
+
+  alert (response.data.message);
+
+  setFormdata({
+    name:"",
+    email:"",
+    message:"",
+  });
+    }
+    catch(err){
+      console.log(err);
+      alert("Failed To Send DAta");
+    }
+  }
   return (
     <div>
       {/* Navbar */}
@@ -145,12 +174,33 @@ function Home() {
           opportunities.
         </p>
 
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" />
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+  type="text"
+  placeholder="Your Name"
+  value={formdata.name}
+  onChange={(e) =>
+    setFormdata({ ...formdata, name: e.target.value })
+  }
+/>
 
-          <input type="email" placeholder="Your Email" />
+          <input
+  type="email"
+  placeholder="Your Email"
+  value={formdata.email}
+  onChange={(e) =>
+    setFormdata({ ...formdata, email: e.target.value })
+  }
+/>
 
-          <textarea rows="6" placeholder="Your Message"></textarea>
+         <textarea
+  rows="6"
+  placeholder="Your Message"
+  value={formdata.message}
+  onChange={(e) =>
+    setFormdata({ ...formdata, message: e.target.value })
+  }
+/>
 
           <button type="submit">Send Message</button>
         </form>
