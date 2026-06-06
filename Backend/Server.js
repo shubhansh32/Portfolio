@@ -10,14 +10,24 @@ connectDb();
 
 const app = express();
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// Routes
-app.use("/api", require("./Routes/contactRoutes"));
 
-const PORT = process.env.PORT || 5000;
+app.use("/api", require("./Routes/contactRoutes"));
+app.use("/image",require("./Routes/imageRoutes"));
+
+const PORT = process.env.PORT || 5050;
+console.log("MY SERVER FILE IS RUNNING");
+
+app.get("/", (req, res) => {
+  res.send("Backend is working");
+});
+
+app.get("/hello", (req, res) => {
+  res.send("HELLO WORKING");
+});
 
 app.listen(PORT, () => {
   console.log(`Server Running On Port ${PORT}`);
